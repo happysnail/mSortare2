@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1479578026 source:e:\adi\pclp2\msortare2\main.cpp
+1479588670 source:e:\adi\pclp2\msortare2\main.cpp
 	<iostream>
 	<string>
 	<fstream>
@@ -9,33 +9,34 @@
 	"include\InsertionSort.h"
 	"include\SelectionSort.h"
 
-1479580103 e:\adi\pclp2\msortare2\include\sort.h
+1479588912 e:\adi\pclp2\msortare2\include\sort.h
 	<string>
 
 1479577420 source:e:\adi\pclp2\msortare2\src\sort.cpp
 	"Sort.h"
 	<sstream>
 
-1479580179 source:e:\adi\pclp2\msortare2\src\bubblesort.cpp
+1479588541 source:e:\adi\pclp2\msortare2\src\bubblesort.cpp
 	"BubbleSort.h"
+
+1479588920 e:\adi\pclp2\msortare2\include\bubblesort.h
+	"Sort.h"
 	<iostream>
 	<fstream>
 
-1479580056 e:\adi\pclp2\msortare2\include\bubblesort.h
-	"Sort.h"
-
-1479580195 source:e:\adi\pclp2\msortare2\src\insertionsort.cpp
+1479588559 source:e:\adi\pclp2\msortare2\src\insertionsort.cpp
 	"InsertionSort.h"
+
+1479588919 e:\adi\pclp2\msortare2\include\insertionsort.h
+	"Sort.h"
 	<iostream>
 	<fstream>
 
-1479580046 e:\adi\pclp2\msortare2\include\insertionsort.h
-	"Sort.h"
-
-1479580207 source:e:\adi\pclp2\msortare2\src\selectionsort.cpp
+1479588575 source:e:\adi\pclp2\msortare2\src\selectionsort.cpp
 	"SelectionSort.h"
-	<iostream>
 
-1479580058 e:\adi\pclp2\msortare2\include\selectionsort.h
+1479588919 e:\adi\pclp2\msortare2\include\selectionsort.h
 	"Sort.h"
+	<iostream>
+	<fstream>
 

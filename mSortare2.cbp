@@ -35,9 +35,13 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/BubbleSort.h" />
+		<Unit filename="include/InsertionSort.h" />
+		<Unit filename="include/SelectionSort.h" />
 		<Unit filename="include/Sort.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/BubbleSort.cpp" />
+		<Unit filename="src/InsertionSort.cpp" />
+		<Unit filename="src/SelectionSort.cpp" />
 		<Unit filename="src/Sort.cpp" />
 		<Extensions>
 			<code_completion />
