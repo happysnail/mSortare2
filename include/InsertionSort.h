@@ -8,7 +8,7 @@ class InsertionSort: public Sort
         InsertionSort();
         virtual ~InsertionSort();
        // using Sort::sort;
-        //void sort();
+        void sort(int vect[], int size);
     protected:
     private:
 };

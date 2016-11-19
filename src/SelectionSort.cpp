@@ -11,7 +11,7 @@ SelectionSort::~SelectionSort()
     //dtor
 }
 
-void sort(int vect[], int size)
+void Sort :: sort(int vect[], int size)
 {
     int nrElemente,aux;
 //    n=10;

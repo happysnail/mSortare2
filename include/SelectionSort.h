@@ -8,7 +8,7 @@ class SelectionSort: public Sort
     public:
         SelectionSort();
         virtual ~SelectionSort();
-        void sort();
+        void sort(int vect[], int size);
     protected:
     private:
 };

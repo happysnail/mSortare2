@@ -14,7 +14,6 @@ void generare();
 
 int main()
 {
-    //Sort ob1;
     generare();
 
     BubbleSort bubbleSort;
@@ -25,11 +24,7 @@ int main()
     Sort * ppoly2 = &insertionSort;
     Sort * ppoly3 = &selectionSort;
 
-    //intodu obiectele de mai sus intr-un vector
-    //pentru fiecare metode se sortare, sorteaza un alt vector de intregi
-
-
-
+    Sort vect[3] = {ppoly1, ppoly2, ppoly3};
 
     return 0;
 }

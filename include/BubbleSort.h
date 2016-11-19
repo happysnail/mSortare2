@@ -8,7 +8,7 @@ class BubbleSort: public Sort
         BubbleSort();
         virtual ~BubbleSort();
 //        using Sort::sort;
-        void sort();
+        void sort(int vect[], int size);
     protected:
     private:
 };

@@ -12,7 +12,7 @@ InsertionSort::~InsertionSort()
     //dtor
 }
 
-void sort(int vect[], int size){
+void Sort :: sort(int vect[], int size){
     int numarElemente,*v,x,j;
 
     ifstream f;

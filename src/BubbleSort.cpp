@@ -15,7 +15,7 @@ BubbleSort::~BubbleSort()
 }
 
 //suprascrierea functiilor
-void sort(int vect[], int size){
+void Sort :: sort(int vect[], int size) {
     int ok,aux,*v,numarElemente;
 
     ifstream f;
