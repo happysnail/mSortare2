@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1479577422 source:e:\adi\pclp2\msortare2\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<cstdlib>
+	"include\Sort.h"
+	"include\BubbleSort.h"
+	"include\InsertionSort.h"
+	"include\SelectionSort.h"
+
+1479578324 e:\adi\pclp2\msortare2\include\sort.h
+	<string>
+
+1479577420 source:e:\adi\pclp2\msortare2\src\sort.cpp
+	"Sort.h"
+	<sstream>
+
+1479577695 source:e:\adi\pclp2\msortare2\src\bubblesort.cpp
+	"BubbleSort.h"
+	<iostream>
+	<fstream>
+
+1479577512 e:\adi\pclp2\msortare2\include\bubblesort.h
+	"Sort.h"
+
+1479577659 source:e:\adi\pclp2\msortare2\src\insertionsort.cpp
+	"InsertionSort.h"
+	<iostream>
+	<fstream>
+
+1479577787 e:\adi\pclp2\msortare2\include\insertionsort.h
+	"Sort.h"
+
+1479577654 source:e:\adi\pclp2\msortare2\src\selectionsort.cpp
+	"SelectionSort.h"
+	<iostream>
+
+1479577554 e:\adi\pclp2\msortare2\include\selectionsort.h
+	"Sort.h"
+
