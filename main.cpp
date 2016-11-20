@@ -7,6 +7,9 @@
 #include "include\BubbleSort.h"
 #include "include\InsertionSort.h"
 #include "include\SelectionSort.h"
+#include "include\CountingSort.h"
+#include "include\MergeSort.h"
+
 
 using namespace std;
 
@@ -14,23 +17,35 @@ void generare();
 
 int main()
 {
-    generare();
-    int v[3]={1,2,3};
+    //generare();
+    int v[4]={3,1,4,2};
 
     BubbleSort bubbleSort;
     InsertionSort insertionSort;
     SelectionSort selectionSort;
+    CountingSort countingSort;
+    MergeSort mergeSort;
 
     Sort * ppoly1 = &bubbleSort;
     Sort * ppoly2 = &insertionSort;
     Sort * ppoly3 = &selectionSort;
+    Sort * ppoly4 = &countingSort;
+    Sort * ppoly5 = &mergeSort;
 
-    Sort *vect[3] = {ppoly1, ppoly2, ppoly3};
+    Sort *vectO[5] = {ppoly1, ppoly2, ppoly3, ppoly4, ppoly5};
 
-    vect[0]->sort2(v,3);
-    vect[1]->sort2(v,3);
-    vect[2]->sort2(v,3);
-
+    //Pentru selectarea metodelor de sortare
+    int selMet[5];
+    cout<<endl<<"Puneti 1 pentru metodele de sortare dorite, si 0 in caz contrar.";
+    cout<<endl<<"1-Buble"<<endl<<"2-Insertie"<<endl<<"3-Selectie"<<endl<<"4-Numarare"<<endl;
+    for(int i=0;i<5;i++){
+        cout<<"Metoda de sortare nr "<<i+1<<":  ";
+        cin>>selMet[i];
+    }
+    for(int i=0;i<5;i++){
+        if(selMet[i]==1)
+            vectO[i]->sort2(v,4);
+    }
     return 0;
 }
 

@@ -6,24 +6,28 @@
 
 class BubbleSort: public Sort
 {
-    public:
-        BubbleSort();
-        virtual ~BubbleSort();
-//        using Sort::sort;
-    void sort2(int vect[], int size) {
-        int ok,aux,*v,numarElemente;
+public:
+    BubbleSort();
+    virtual ~BubbleSort();
 
-        ifstream f;
-        f.open("fisierGenerat.txt");
-        f>>numarElemente;
-        v=new int [numarElemente];
-        for(int i=0;i<numarElemente;i++)
-            f>>v[i];
+    void sort2(int vect[], int size) {
+        int ok,aux,*v,nrElemente;
+
+        nrElemente = size;
+        v = new int [nrElemente];
+        for(int i=0;i<nrElemente;i++)
+            v[i]=vect[i];
+
+        //ifstream f;
+        //f.open("fisierGenerat.txt");
+        //f>>nrElemente;
+        //v=new int [nrElemente];
+        //for(int i=0;i<nrElemente;i++)
+            //f>>v[i];
         do{
             ok=1;
-            for(int i=0;i<numarElemente-1;i++)
+            for(int i=0;i<nrElemente-1;i++)
             {
-
                 if(v[i]>v[i+1])
                 {
                     ok=0;
@@ -35,10 +39,10 @@ class BubbleSort: public Sort
         }while(ok!=1);
         cout<<endl;
         cout<<"Sortarea bulelor a avut loc cu succes";
-        f.close();
+        //f.close();
     }
-    protected:
-    private:
+protected:
+private:
 };
 
 #endif // BUBBLESORT_H

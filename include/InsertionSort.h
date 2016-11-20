@@ -6,22 +6,25 @@
 
 class InsertionSort: public Sort
 {
-    public:
-        InsertionSort();
-        virtual ~InsertionSort();
-       // using Sort::sort;
+public:
+    InsertionSort();
+    virtual ~InsertionSort();
+
     void sort2(int vect[], int size){
-        int numarElemente,*v,x,j;
+        int nrElemente,*v,x,j;
+        nrElemente = size;
+        v = new int [nrElemente];
+        for(int i=0;i<nrElemente;i++)
+            v[i]=vect[i];
 
-        ifstream f;
-        f.open("fisierGenerat.txt");
-        f>>numarElemente;
-        v=new int [numarElemente];
+        //ifstream f;
+        //f.open("fisierGenerat.txt");
+        //f>>numarElemente;
+        //v=new int [nrElemente];
+        //for(int i=0;i<nrElemente;i++)
+            //f>>v[i];
 
-        for(int i=0;i<numarElemente;i++)
-            f>>v[i];
-
-        for(int i=2;i<=numarElemente;i++)
+        for(int i=1;i<nrElemente;i++)
             if (v[i]<v[i-1])
             {
                 x=v[i];
@@ -36,12 +39,12 @@ class InsertionSort: public Sort
 
         cout<<endl;
         cout<<"Sortarea prin insertie a avut loc cu succes";
-//    for(int i=0;i<numarElemente;i++)
-//        cout<<v[i]<<" ";
-        f.close();
+//        for(int i=0;i<nrElemente;i++)
+//            cout<<v[i]<<" ";
+        //f.close();
     }
-    protected:
-    private:
+protected:
+private:
 };
 
 #endif // INSERTIONSORT_H
