@@ -10,7 +10,7 @@ class SelectionSort: public Sort
 public:
     SelectionSort();
     virtual ~SelectionSort();
-    void sort2(int vect[], int size)
+    void sort(int vect[], int size)
     {
         int nrElemente,aux,*v;
         nrElemente = size;
@@ -28,6 +28,50 @@ public:
                 }
         cout<<endl<<"Sortarea prin selectie a avut loc cu succes";
     }
+
+    void sortg(int vect[], int size)
+    {
+        int nrElemente,aux,*v,q=0;
+        nrElemente = size;
+        cout<<endl<<endl<<"Selection Sort"<<endl;
+        v = new int [nrElemente];
+        for(int i=0;i<nrElemente;i++)
+            v[i]=vect[i];
+
+        for(int i=0;i<nrElemente-1;i++)
+            for(int j=i+1;j<nrElemente;j++)
+                if(v[i]>v[j])
+                {
+                    if(q==0)
+                        cout<<"Vectorul initial: "<<endl;
+                    else
+                        cout<<"Mutarea "<<q<<": "<<endl;
+                    for(int i=nrElemente; i>0;i--)
+                    {
+                        for(int j=0;j<nrElemente;j++)
+                            if(v[j]>=i)
+                                cout<<"_ ";
+                            else
+                                cout<<"  ";
+                        cout<<endl;
+                    }
+                    aux=v[j];
+                    v[j]=v[i];
+                    v[i]=aux;
+                    q++;
+                }
+        cout<<"Mutarea "<<q<<": "<<endl;
+        for(int i=nrElemente; i>0;i--)
+        {
+            for(int j=0;j<nrElemente;j++)
+                if(v[j]>=i)
+                    cout<<"_ ";
+                else
+                    cout<<"  ";
+            cout<<endl;
+        }
+    }
+
 protected:
 private:
 };

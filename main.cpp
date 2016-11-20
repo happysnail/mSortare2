@@ -14,17 +14,20 @@
 using namespace std;
 
 void generare();
+void meniu();
 
 int main()
 {
     //generare();
-    int v[4]={3,1,4,2};
+    //int v1[8]={4,15,16,50,8,23,42,108};
+    //int v1[8]={8,108,50,4,16,15,42,23};
+    int v[6]={4,1,2,6,3,5};
 
-    BubbleSort bubbleSort;
-    InsertionSort insertionSort;
-    SelectionSort selectionSort;
-    CountingSort countingSort;
-    MergeSort mergeSort;
+    BubbleSort bubbleSort;          //g
+    InsertionSort insertionSort;    //g
+    SelectionSort selectionSort;    //g
+    CountingSort countingSort;      //g
+    MergeSort mergeSort;            //g
 
     Sort * ppoly1 = &bubbleSort;
     Sort * ppoly2 = &insertionSort;
@@ -35,17 +38,20 @@ int main()
     Sort *vectO[5] = {ppoly1, ppoly2, ppoly3, ppoly4, ppoly5};
 
     //Pentru selectarea metodelor de sortare
-    int selMet[5];
-    cout<<endl<<"Puneti 1 pentru metodele de sortare dorite, si 0 in caz contrar.";
-    cout<<endl<<"1-Buble"<<endl<<"2-Insertie"<<endl<<"3-Selectie"<<endl<<"4-Numarare"<<endl;
+//    int selMet[5];
+//    cout<<endl<<"Puneti 1 pentru metodele de sortare dorite, si 0 in caz contrar.";
+//    cout<<endl<<"1-Buble"<<endl<<"2-Insertie"<<endl<<"3-Selectie"<<endl<<"4-Numarare"<<endl;
+//    for(int i=0;i<5;i++){
+//        cout<<"Metoda de sortare nr "<<i+1<<":  ";
+//        cin>>selMet[i];
+//    }
     for(int i=0;i<5;i++){
-        cout<<"Metoda de sortare nr "<<i+1<<":  ";
-        cin>>selMet[i];
+        //if(selMet[i]==1)
+            vectO[i]->sortg(v,6);
     }
-    for(int i=0;i<5;i++){
-        if(selMet[i]==1)
-            vectO[i]->sort2(v,4);
-    }
+
+    //vectO[4]->sortg(v,6);
+
     return 0;
 }
 
@@ -63,4 +69,10 @@ void generare()
     }
     cout<<"Generarea a avut loc cu succes.";
     h.close();
+}
+
+void meniu()
+{
+
+
 }

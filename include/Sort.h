@@ -11,7 +11,8 @@ class Sort
         int *vect;
         Sort();
         string afisare();
-        virtual void sort2(int vect[], int size) = 0;
+        virtual void sort(int vect[], int size) = 0;
+        virtual void sortg(int vect[], int size) = 0;
         virtual ~Sort();
     protected:
     private:
