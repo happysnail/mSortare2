@@ -32,6 +32,11 @@ public:
         }while(ok!=1);
         cout<<endl;
         cout<<"Sortarea bulelor a avut loc cu succes";
+        if(nrElemente<30){
+            cout<<endl<<"Vectorul sortat este:"<<endl;
+            for(int i=0;i<nrElemente;i++)
+                cout<<v[i]<<" ";
+        }
     }
 
     void sortg(int vect[], int size) {
@@ -82,7 +87,6 @@ public:
         }
         cout<<endl;
     }
-
 protected:
 private:
 };

@@ -26,6 +26,11 @@ class CountingSort : public Sort
             for(i=0;i<n;i++)
                 a[b[i]]=c[i];
         cout<<endl<<"Sortarea prin numarare a avut loc cu succes";
+        if(n<30){
+            cout<<endl<<"Vectorul sortat este:"<<endl;
+            for(int i=0;i<n;i++)
+                cout<<a[i]<<" ";
+        }
         }
 
 //Grafic
@@ -38,9 +43,9 @@ class CountingSort : public Sort
                 c[i]=a[i]=vect[i];
             }
             cout<<"Vectorul initial: "<<endl;
-            for(int i=nrElemente; i>0;i--)
+            for(int i=n; i>0;i--)
             {
-                for(int j=0;j<nrElemente;j++)
+                for(int j=0;j<n;j++)
                     if(a[j]>=i)
                         cout<<"_ ";
                     else
@@ -58,9 +63,9 @@ class CountingSort : public Sort
             for(i=0;i<n;i++)
                 a[b[i]]=c[i];
             cout<<"Mutarea 1:"<<endl;
-            for(int i=nrElemente; i>0;i--)
+            for(int i=n; i>0;i--)
             {
-                for(int j=0;j<nrElemente;j++)
+                for(int j=0;j<n;j++)
                     if(a[j]>=i)
                         cout<<"_ ";
                     else

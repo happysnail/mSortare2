@@ -49,7 +49,12 @@ public:
         for(int i=0;i<nrElemente;i++)
             v[i+1]=vect[i];
         divimp(1,nrElemente);
-        cout<<endl<<"Sortarea marge a avut loc cu succes."<<endl;
+        cout<<endl<<"Sortarea Merge a avut loc cu succes.";
+        if(nrElemente<30){
+            cout<<endl<<"Vectorul sortat este:"<<endl;
+            for(int i=1;i<=nrElemente;i++)
+                cout<<v[i]<<" ";
+        }
     }
 
 //Grafic
