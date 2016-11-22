@@ -8,10 +8,10 @@ class MergeSort : public Sort
 public:
     MergeSort();
     virtual ~MergeSort();
-    int *v,nrElemente;
+    int *v,nrElemente,b[400000];
     int q=0;
     void interclas(int i,int m,int j)
-    {   int b[1000];
+    {
         int x=i;
         int k=1;
         int y=m+1;
@@ -60,7 +60,7 @@ public:
 //Grafic
 
     void interclasg(int i,int m,int j)
-    {   int b[1000];
+    {
         int x=i;
         int k=1;
         int y=m+1;

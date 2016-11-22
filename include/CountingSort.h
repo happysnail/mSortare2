@@ -10,7 +10,10 @@ class CountingSort : public Sort
         CountingSort();
         virtual ~CountingSort();
         void sort(int vect[], int size){
-            int a[25],b[25],c[25],n=size,i,j;
+            int *a,*b,*c,n=size,i,j;
+            a = new int [n];
+            b = new int [n];
+            c = new int [n];
             for(i=0;i<n;i++){
                 b[i]=0;
                 c[i]=a[i]=vect[i];
@@ -31,7 +34,7 @@ class CountingSort : public Sort
             for(int i=0;i<n;i++)
                 cout<<a[i]<<" ";
         }
-        }
+    }
 
 //Grafic
 

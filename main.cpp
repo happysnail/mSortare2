@@ -12,19 +12,20 @@
 #include "include\CountingSort.h"
 #include "include\MergeSort.h"
 
-using namespace std;
+using namespace std;        //de terminat fct citireTastatura (teste)
 
-void generare();
+int generare();
 void meniu1();
 void meniu2();
 void meniu3();
 
+int marime1,*vg,marime,*v;
+
 int main()
 {
-    //generare();
-    //int v1[8]={4,15,16,50,8,23,42,108};
-    int v[9]={1,2,5,4,3,8,9,6,7};
-    int marime = 9;
+    int v[11]={1,2,5,5,5,4,3,8,9,6,7};
+    int marime = 11;
+    int marime1;//pt vectorul generat
     LARGE_INTEGER start, end, freq;
 
     BubbleSort bubbleSort;
@@ -41,29 +42,26 @@ int main()
 
     Sort *vectO[5] = {ppoly1, ppoly2, ppoly3, ppoly4, ppoly5};
 
-    //Pentru selectarea metodelor de sortare
-
-    //vectO[4]->sortg(v,6);
-
-    QueryPerformanceFrequency(&freq);
-    QueryPerformanceCounter(&start);
-    //vectO[0]->sort(v,9);
-    QueryPerformanceCounter(&end);
-    cout<<endl<<"Timpul este:\t"<<(end.QuadPart - start.QuadPart)* 1000000 / freq.QuadPart;
+//    QueryPerformanceFrequency(&freq);
+//    QueryPerformanceCounter(&start);
+//    QueryPerformanceCounter(&end);
+//    cout<<endl<<"Timpul este:\t"<<(end.QuadPart - start.QuadPart)* 1000000 / freq.QuadPart;
 
     char c,d,e;
     do{
         meniu1();
         switch(c=getch()){
             case '1':
-                cout<<"1";
-                getch();break;
-            case '6':
+                marime1=generare();getch();break;
+            case '4':
                 do{
+
                     meniu2();
+                    if(vg==NULL){cout<<endl<<"Vectorul nu este generat.";break;}
                         switch (d=getch()){
                         case '1':
                                 int selMet[5];
+                                system("cls");
                                 cout<<endl<<"Puneti 1 pentru metodele de sortare dorite, si 0 in caz contrar.";
                                 cout<<endl<<"1-Buble"<<endl<<"2-Insertion"<<endl<<"3-Selection"<<endl<<"4-Counting"<<endl<<"5-Merge"<<endl;
                                 for(int i=0;i<5;i++){
@@ -72,7 +70,7 @@ int main()
                                 }
                                 for(int i=0;i<5;i++){
                                     if(selMet[i]==1)
-                                        vectO[i]->sort(v,9);
+                                        vectO[i]->sort(vg,marime1);
                                 }
                             getch();break;
                         case '3':
@@ -195,20 +193,41 @@ int main()
     return 0;
 }
 
-void generare()
+int generare()
 {
-    int nrElemente = 10;
+    cout<<"Introdu numarul de elemente: ";
+    cin>>marime1;
     ofstream h;
     h.open("fisierGenerat.txt");
     if(h.fail())
-        cout<<"Erroare citire din fisier.";
-    h<<nrElemente<<endl;
-    for(int i=0; i<nrElemente; i++)
-    {
-        h<<rand()% 32676<<" ";
-    }
+        cout<<"Erroare scriere in fisier.";
+    h<<marime1<<endl;
+    for(int i=0; i<marime1; i++)
+        h<<rand()% 32000<<" ";
     cout<<"Generarea a avut loc cu succes.";
     h.close();
+    ifstream f;
+    f.open("fisierGenerat.txt",ios::out);
+    if(f.fail())
+        cout<<"desc";
+    f>>marime1;
+    vg = new int [marime1];
+    cout<<marime1;
+    for(int i=0;i<marime1;i++)
+        f>>vg[i];
+    f.close();
+    return marime1;
+}
+
+int citireTastatura()
+{
+    cout<<"Introduceti marimea: ";
+    cin>>marime;
+    v = new int [marime];
+    cout<<"Introduceti valori mai mici strict de 10";
+    for(int i=0;i<marime;i++)
+        cin>>v[i];
+    return marime;
 }
 
 void meniu3()
@@ -238,11 +257,9 @@ void meniu2(){
 void meniu1(){
         system("cls");
         cout << " 1-Generare vector in fisier;" << endl;
-        cout << " 2-Citeste vector de la tastatura;" << endl;
-        cout << " 3-Salvare in fisier al vectorului citit de la tastatura;" << endl;
-        cout << " 4-Sorteaza vectorul citit de la tastatura;" << endl;
-        cout << " 5-Citeste vector din fisier;" << endl;
-        cout << " 6-Metode de sortare;" << endl;
-        cout << " 7-Informatii;" << endl;
+        cout << " 2-Citeste vector de la tastatura + salvare in fisier;" << endl;
+        cout << " 3-Sorteaza vectorul citit de la tastatura;" << endl;
+        cout << " 4-Metode de sortare;" << endl;
+        cout << " 5-Informatii;" << endl;
         cout << " x-Exit." << endl;
 }
