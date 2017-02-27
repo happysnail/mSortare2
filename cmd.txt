@@ -6,4 +6,4 @@ git push origin master - faci push la cod pe github
 git checkout .  - stergi totate modificarile tale
 git dif - face difrenta intre local si ce e pe master (server/remote)
 
-git pull origin master - iei code de pe github
+git pull origin master - iei code de pe githubs
